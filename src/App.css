@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.canvas {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.video {
+  position: absolute;
+  border-radius: 5em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.homepage {
+  background: rgb(85,72,223);
+background: linear-gradient(135deg, rgba(85,72,223,1) 0%, rgba(61,7,1,1) 48%, rgba(233,85,163,1) 100%);
+}

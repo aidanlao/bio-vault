@@ -1,3 +1,8 @@
+/* src/index.css or any other CSS file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +11,154 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.homepage {
+  background: rgb(85,72,223);
+background: linear-gradient(135deg, rgba(85,72,223,1) 0%, rgba(61,7,1,1) 48%, rgba(233,85,163,1) 100%);
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.canvas {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.video {
+  position: absolute;
+  border-radius: 5em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.homepage {
+  background: rgb(31,24,113);
+  background: linear-gradient(135deg, rgba(31,24,113,1) 0%, rgba(13,4,36,1) 23%, rgba(18,2,0,1) 57%, rgba(50,7,27,1) 86%, rgba(116,21,71,1) 100%);
+}
+
+/* Gradient Text CSS */
+.gradient-text {
+  font-weight: bold;
+  background-image: linear-gradient(135deg, rgba(187,182,238,1) 0%, rgba(255,255,255,1) 46%, rgba(233,122,180,1) 100%);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glowing Button Style */
+.glowing-button {
+  /* Green background */
+  border: 1px solid white;
+  
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Glowing effect */
+.glowing-button:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
+  transform: scale(1.1); /* Slightly enlarge the button */
+  animation: glowing 1.5s infinite alternate;
+}
+.chooseFile {
+  border-radius: 1em;
+  background-color: white;
+
+}
+.bioscanner {
+  height: 200vh;
+}
+.input {
+  width: 100%;
+  border-radius: 2em;
+  padding: 0.3em 0.8em;
+  background-color: transparent !important; 
+  border: 1px solid white;
+  color: white;
+  
+}
+input:-internal-autofill-selected.input {
+  background-color: transparent !important;
+}
+
+/* Override autofill background color */
+.input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent !important; /* Ensures transparency */
+  color: #333; /* Optional: Override autofill text color */
+}
+input {
+  background-color: transparent;
+}
+/* Style the file upload label to look like a button */
+.file-upload-label {
+  display: inline-block;
+  background-color: transparent; /* Green background */
+  color: white;
+  border: 1px solid white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 2em;
+  cursor: pointer;
+  text-align: center;
+ /* Optional border style */
+}
+
+
+/* Hide the default file input button */
+.file-upload-input {
+  display: none;
+}
+
+/* Optional: Show the file name after selection */
+.file-upload-input:focus + .file-upload-label span::after {
+  content: " (File Selected)";
+  font-style: italic;
+  color: #888;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 25px rgba(255, 255, 255, 0.8), 0 0 35px rgba(255, 255, 255, 0.6);
+  }
+}
+
+
+.t, p {
+  font-family: "Geist Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.m {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+
+  font-style: normal;
+}
+
+
+.o {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
